@@ -1,0 +1,14 @@
+- name: Teuku Mulia Ichsan
+  bio: |
+    Full Stack Developer, Node JS and React JS in Loved. Learner of Life.
+  avatar: ./avatars/mein.jpeg
+  featured: true
+  social:
+    - name: github
+      url: https://github.com/arogant7000
+    - name: twitter
+      url: https://twitter.com/callme_dondO
+    - name: instagram
+      url: https://instagram.com/mulya.ichsan
+    - name: linkedin
+      url: https://linkedin.com/in/mulia-ichsan
