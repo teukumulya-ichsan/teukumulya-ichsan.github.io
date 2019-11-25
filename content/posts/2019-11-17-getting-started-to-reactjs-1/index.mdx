@@ -1,0 +1,154 @@
+---
+title: Getting Started to React JS (1)
+author: Teuku Mulia Ichsan
+date: 2019-11-17
+hero: ./images/reacts.png
+excerpt: Ada beberapa hal yang harus dipelajari sebelum menggunakan React...
+---
+
+Sebelum menggunakan ReactJS ada beberapa hal yang harusnya dapat dipahami, ini dikarenakan ReactJs merupakan salah satu framework javascript generasi terbaru (Next-Gen Js).
+
+Jadi, pada postingan ini merupakan pengantar singkat fitur-fitur Next-Gen Js, yang tentu saja berfokus pada yang paling banyak digunakan pada ReactJS.
+
+## Let & Consts
+
+Pada javascript generasi dulu, kita menggunakan `var` untuk mendeklarasikan variable. Namun pada Next-Gen Js kita menggunakan `let` dan `const`. Keduanya digunakan untuk deklarasi variable. Perbedaannya adalah jika anda ingin menetapkan (konstan) suatu value dari variable maka kita menggunakan `const` namun jika tidak (reasigned) maka gunkanan `let`
+
+### let
+
+```javascript
+let simple = "sad";
+simple = "very sad";
+
+console.log(simple);
+```
+
+Pada code diatas, kita telah melakukan deklarasi variable simple dengan "sad" , kemudian kita melakukan asigned kembali dengan value "very sad" kedalam variable simple. Maka nilai yang akan di inputkan dari console untuk variable simple adalah very sad dikarenakan sudah reasigned.
+
+[Reference `let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+
+### const
+
+```javascript
+const simple = "sad";
+simple = "very sad";
+
+console.log(simple);
+```
+
+Pada contoh di atas ini kita melakukan hanya perubahan `let` ke dalam `const`. Dan hasilnya adalah sebaliknya dari penggunaan `let`. Dikarenakan pada const nilai dari variable tidak dapat di reasigned.
+
+[Reference `const`](https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Statements/const)
+
+## ES6 Arrow Functions
+
+`Arrow Fuction` dalah cara berbeda untuk membuat fungsi dalam JavaScript. Selain sintaks yang lebih pendek, mereka menawarkan keuntungan untuk menjaga konteks dari keyword `this` .
+
+Sintaks fungsi panah mungkin terlihat aneh tapi sebenarnya
+sederhana.
+
+```javascript
+. function callMe(name) {
+. console.log(name);
+. }
+```
+
+Kita juga dapat menulisnya seperti :
+
+```javascript
+. const callMe = function(name) {
+. console.log(name);
+. }
+```
+
+lalu bisa jadi sesingkat ini akhirnya :
+
+```javascript
+. const callMe = (name) => {
+. console.log(name);
+. }
+```
+
+### Penting
+
+Ketika **tanpa argumen** , kita harus menggunakan tanda kurung kosong dalam mendeklarasikan fungsi :
+
+```javascript
+. const callMe = () => {
+. console.log('Max!');
+. }
+```
+
+Ketika hanya **1 argumen**, kita dapat menghilangkan tanda kurung seperti berikut:
+
+```javascript
+. const callMe = name => {
+. console.log(name);
+. }
+```
+
+Jika ingin `return value`, kita dapat melakukan dengan cara yang singkat seperti ini :
+
+```javascript
+. const returnMe = name => name
+```
+
+Kode diatas pada dasarnya sama seperti kode yang lebih panjang dibawah ini :
+
+```javascript
+. const returnMe = name => {
+. return name;
+. }
+```
+
+## Exports & Imports
+
+Dalam project React, khususnya dalam semua project Javascript modern, kita menggabungkan kode antar banyak file Javascript - itu disebut `Modules`. Kita melakukannya untuk menjaga setiap file atau module tetap fokus dan termanajemen.
+
+Jadi untuk dapat mengakses fungsional dari file lain, kita perlu melakukan `export` (untuk membuat ketersedian) dan melakukan `import` (untuk mendapatkan akses) ke statetment dari file lainnya.
+
+### export
+
+kita memiliki 2 tipe export berbeda yaitu :
+
+### 1. default
+
+```javascript
+		export default ...;
+```
+
+### 2. named exports
+
+```javascript
+		export const someData = ...;
+```
+
+Lalu kita dapat melalukan import type `default` seperti dibawah ini:
+
+```javascript
+import someNameOfYourChoice from "./path/to/file.js";
+```
+
+Sebenarnya `someNameOfYourChoice` sepenuhnya terserah anda.
+
+Sedangkan untuk `Named exports` harus di importkan berdasarkan namanya :
+
+```javascript
+import { someData } from "./path/to/file.js";
+```
+
+Satu file hanya dapat mengandung 1 default yang dapat di export sedangkan untuk named Export memiliki jumlah yang tak terbatas. Saat melakukan import `named export`, kita juga bisa mengimportkan semua fungsionalnya dalam sekalian dengan syntax seperti berikut :
+
+```javascript
+import * as upToYour from "./path/to/file.js";
+```
+
+`upToYou` adalah sebuah bundles dari semua variabel/fungsi yang di export dalam 1 objek javascript. Sebagai contoh:
+
+```javascript
+export const someData = ... (/path/to/file.js)
+```
+
+Kita dapat mengaksesnya dengan `upToYou` seperti : `javascript upToYou.someData`
+
+**Pada postingan saya berikutnya akan membahas lanjutannya mengenai `Classes`, `Spread / Rest Operator` dan `Destructing`**
