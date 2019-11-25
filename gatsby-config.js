@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Mulya Ichsan Blog`,
+    title: `Ichsan Things & React`,
     name: `Teuku Mulia Ichsan`,
     siteUrl: `https://teukumulya-ichsan.com`,
     description: `Teuku Mulia Ichsan Blog Site`,
