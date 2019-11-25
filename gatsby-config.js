@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Mulya Ichsan Blog`,
-    name: `Teuku Mulia`,
+    name: `Teuku Mulia Ichsan`,
     siteUrl: `https://teukumulya-ichsan.com`,
     description: `Teuku Mulia Ichsan Blog Site`,
     hero: {

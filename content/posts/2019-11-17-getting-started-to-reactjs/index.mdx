@@ -2,7 +2,7 @@
 title: Getting Started to Reactjs
 author: Teuku Mulia Ichsan
 date: 2019-11-17
-hero: ./images/reacts.png 
+hero: ./images/reacts.png
 excerpt: Ada beberapa hal yang harus dipelajari sebelum menggunakan React...
 ---
 
@@ -12,9 +12,9 @@ Sebelum menggunakan React ada beberapa hal yang harusnya dapat dipahami, ini dik
 
 Jadi, sebelum menggunakan React lebih jauh maka terdapat beberapa hal yang harus dipahami yaitu mengenai penggunaan model penulisan dengan ES6 atau yang terbaru. Diantaranya penggunaan const/let, arrow function dan classes.
 
-## Const / Let 
+## Const / Let
 
-Pada awalnya kita menggunakan var untuk mendefininiskan atau mendeklarasikan suatu value. Pada Next-Gen javascript kita tidak akan menggunakan lagi identifier var, namun akan menggunakan const dan let. Namun bukan berarti tidak bisa jika kita menggunakan var. Namun tidak lagi di anjurkan. 
+Pada awalnya kita menggunakan var untuk mendefininiskan atau mendeklarasikan suatu value. Pada Next-Gen javascript kita tidak akan menggunakan lagi identifier var, namun akan menggunakan const dan let. Namun bukan berarti tidak bisa jika kita menggunakan var. Namun tidak lagi di anjurkan.
 
 ### Const
 
@@ -26,13 +26,14 @@ const simple = "sad";
 
 pada pendeklarasian diatas kita mengisi nilai dari "simple" dengan value sad. Namun kita tidak bisa mengisi kembali nilai tersebut dengan cara pass by value seperti pada penggunaan pada identifier var.
 
-Example : 
+Example :
+
 ```javascript
-		const simple = "sad";
+const simple = "sad";
 
-		simple = "very sad";
+simple = "very sad";
 
-		console.log(simple);
+console.log(simple);
 ```
 
 dari code di atas, variabel simple akan tetap bernilai "sad" walaupun kita memasukkan nilai baru dengan "very sad". Ini dikarenakan nilai tersebut sudah konstan.
@@ -41,14 +42,14 @@ dari code di atas, variabel simple akan tetap bernilai "sad" walaupun kita memas
 
 Pada bagian const diatas, kita tidak bisa merubah nilai simple yang bersifat konstan, namun untuk mendefinikasikan suatu variabel yang dapat dirubah, maka harus menggunakan let. Ini sama seperti dengan penggunaan var pada generasi javascript sebelumnya. Sebagai contoh penggunaan let seperti berikut.
 
-Example : 
+Example :
 
 ```javascript
-	let simple = "sad";
+let simple = "sad";
 
-	simple = "very sad"
+simple = "very sad";
 
-	console.log(simple);
+console.log(simple);
 ```
 
 So, dari code diatas, walaupun dari nilai pertama value dari simple adalah "sad", namun setelah diberi nilai baru. Maka variabel yang akan di hasilkan adalah value baru.
@@ -71,48 +72,53 @@ kita mungkin akan mendapatkan nya dalam 'var', sedangkan pada arrow fuction kita
 	}
 ```
 
-daftar argumen diatas masih kosong namun dapat menerima beberapa argumen. Namun percayalah penulisan dengan arrow fuction akan lebih pendek dari normal, dan keuntungan terbesar adalah dapat memecahkan banyak masalah yang kita alami mengenai kata kunci dalam javascript. Salah satunya adalah  penggunaan keyword "this"
+daftar argumen diatas masih kosong namun dapat menerima beberapa argumen. Namun percayalah penulisan dengan arrow fuction akan lebih pendek dari normal, dan keuntungan terbesar adalah dapat memecahkan banyak masalah yang kita alami mengenai kata kunci dalam javascript. Salah satunya adalah penggunaan keyword "this"
 
 Alasannya ketika menggunakan keyword "this" dalam arrow function, maka fuction tersebut akan selalu menjaga konteksnya dan tidak mengubah secara mengejutkan dallam runtime.
 
 example dalam normal fuction:
 
 ```javascript
-	function printName(name){
-	  console.log(name);
-	}
+function printName(name) {
+  console.log(name);
+}
 
-	printName('Ichsan');
-
+printName("Ichsan");
 ```
 
 example penggunaan arrow fucntion:
-```javascript
-	const printName = (name) => {
-	   console.log(name)
-	}
 
-	printName('Ichsan');
+```javascript
+const printName = name => {
+  console.log(name);
+};
+
+printName("Ichsan");
 ```
 
-Oke, mungkin jika kita lihat penulisannya lebih panjang dan nampak rumit dan sama seperti normal function. So, mari kita liat perbedaannya. 
+Oke, mungkin jika kita lihat penulisannya lebih panjang dan nampak rumit dan sama seperti normal function. So, mari kita liat perbedaannya.
+
 ```javascript
-	const printName = name => {
-	   console.log(name);
-	}
-	printName('ichsan');
+const printName = name => {
+  console.log(name);
+};
+printName("ichsan");
 ```
+
 Pada tahap diatas kita hanya mengubah dengan menghilangkan tanda (). Menandakan bahwa setelah tanda = merupakan bagian untuk argumen function tersebut. Lalu bagaimana jika function tersebut tidak memerlukan argumen?
 
 example arrow function without arguments:
-```javascript
-	const printName = () =>{
-	   console.log('ichsan')
-	}
 
-	printName();
+```javascript
+const printName = () => {
+  console.log("ichsan");
+};
+
+printName();
 ```
+
 Bagaimana jika argumen yang lebih dari 1. Oke mari coba dengan membuat fungsi untuk menjumlahkan 2 argumen.
+
 ```javascript
 	const tambah = (angka1, angka2) => {
 	   return angka1 + angka2;
@@ -120,12 +126,15 @@ Bagaimana jika argumen yang lebih dari 1. Oke mari coba dengan membuat fungsi un
 
 	console.log(tambah(10,2);
 ```
+
 Mudah dan penulisannya lebih mudah di pahamikan ? Oke mari kita coba sederhanakan function tersebut.
+
 ```javascript
 	const tambah = (angka1, angka2) => angka1+angka2;
-	
+
 	console.log(tambah(angka1,angka2);
 ```
+
 Syntax tersebut akan mengembalikan hasil yang sama dari funtion sebelumnya. Namun keuntungan menggunakan arrow function anda dapat menulisnya dalam one line. Jelas lebih mudah dan lebih singkat kan ?
 
 Intinya dalam menggunakan react anda akan sangat sering melihat dengan banyak penggunaan arrow function.
@@ -133,26 +142,33 @@ Intinya dalam menggunakan react anda akan sangat sering melihat dengan banyak pe
 ## Import & Export (Module)
 
 Fitur lain yang ditawarkan oleh Next-Gen Javascript adalah tentang menulis module code yang berfungsi untuk memecahkan code dalam beberapa file. Jadi jika anda susdah memecahkan beberapa file. Anda hanya tinggal meinmport code mana saja yang ingin digunakan. Ini sama pada model javascript sebelumnya dengan menggunakan keyword `require` .
-```javascript
-	require('service'); 
 
-	const app = require('express');
+```javascript
+require("service");
+
+const app = require("express");
 ```
+
 Namun pada next-gen javascript kita menggunakan import/export. Sebagai contoh kita punya satu file person.js dimana menyimpan konstan data sebagai objek yang dikembalikan. Lalu kita memerlukan data tersebut. Bagian menariknya adalah supaya function dalam file.js tersebut dapat digunakan untuk mendapatkan data. Maka kita perlu mengekspor function tersebut menggunakan keyword export.
 
 File person.js
-```javascript
-	const person = {
-	   name: 'Ichsan'
-	}
 
-	export default person
-```
-Dari file diatas jika kita ingin menggunakan file person.js kita hanya perlu mengimport dan memberi nama object sesuai dengan yang kita mau, sebagai contoh kita meng-import file person.js dan memberi nama object tersebut dengan `prs`.
 ```javascript
-	import prs from 'person.js'
+const person = {
+  name: "Ichsan"
+};
+
+export default person;
 ```
+
+Dari file diatas jika kita ingin menggunakan file person.js kita hanya perlu mengimport dan memberi nama object sesuai dengan yang kita mau, sebagai contoh kita meng-import file person.js dan memberi nama object tersebut dengan `prs`.
+
+```javascript
+import prs from "person.js";
+```
+
 Dengan begitu kita sudah dapat menggunakan semua dalam file person.js pada file lain. Dalam kasus diatas kita mendapatkan konstan object person karena dari file person.js menggunakan keyword default bahwa yang hanya di export object person. Lalu bagaimana jika terdapat beberapa object atau fungsi yang di ingin digunakan ? Caranya adalah kita tidak menggunakan export default seperti diatas, akan tetapi kita melakukan export semua fungsi/object. Sebagai contoh :
+
 ```javascript
 	// person.js
 
@@ -164,14 +180,15 @@ Dengan begitu kita sudah dapat menggunakan semua dalam file person.js pada file 
           console.log('developers');
 	}
 ```
+
 Lalu untuk memanggilnya hanya dengan memamnggilkan const objectnya saja. Sebagai contoh untuk mengimport file person.js pada file lain adalah sebagai berikut:
 
 ```javascript
 
        import { person } from 'person.js';
        import { job } from 'person.js';
-		
-	// atau 
+
+	// atau
 
 	import { person, job } from 'person.js';
 
@@ -181,11 +198,13 @@ Lalu untuk memanggilnya hanya dengan memamnggilkan const objectnya saja. Sebagai
 ```
 
 Sangat mudah bukan, lalu bagai mana jika kita ingin memberi nama seperti pada contoh penggunaan export default diatas. Caranya adalah menggunakan keyword 'as' :
+
 ```javascript
-	import { person as prs } from 'person.js';
+import { person as prs } from "person.js";
 
-	// atau 
+// atau
 
-	import * as bundle from 'person.js';
+import * as bundle from "person.js";
 ```
+
 Sangat mudah bukan ?
