@@ -12,7 +12,7 @@ Jadi, pada postingan ini merupakan pengantar singkat fitur-fitur Next-Gen Js, ya
 
 ## Let & Consts
 
-Pada javascript generasi dulu, kita menggunakan `var` untuk mendeklarasikan variable. Namun pada Next-Gen Js kita menggunakan `let` dan `const`. Keduanya digunakan untuk deklarasi variable. Perbedaannya adalah jika anda ingin menetapkan (konstan) suatu value dari variable maka kita menggunakan `const` namun jika tidak (reasigned) maka gunkanan `let`
+Pada javascript generasi dulu, kita menggunakan `var` untuk mendeklarasikan variable. Namun pada Next-Gen Js kita menggunakan `let` dan `const`. Keduanya digunakan untuk deklarasi variable. Perbedaannya adalah jika anda ingin menetapkan (konstan) suatu value dari variable maka kita menggunakan `const` namun jika tidak (reasigned) maka kita gunakan `let`
 
 ### let
 
@@ -42,9 +42,9 @@ Pada contoh di atas ini kita melakukan hanya perubahan `let` ke dalam `const`. D
 
 ## ES6 Arrow Functions
 
-`Arrow Fuction` dalah cara berbeda untuk membuat fungsi dalam JavaScript. Selain sintaks yang lebih pendek, mereka menawarkan keuntungan untuk menjaga konteks dari keyword `this` .
+`Arrow Fuction` adalah cara berbeda untuk membuat fungsi dalam JavaScript. Selain sintaks yang lebih pendek, mereka menawarkan keuntungan untuk menjaga konteks dari keyword `this` .
 
-Sintaks fungsi panah mungkin terlihat aneh tapi sebenarnya
+Sintaks `arrow fuction`  mungkin terlihat aneh tapi sebenarnya
 sederhana.
 
 ```javascript
@@ -69,7 +69,7 @@ lalu bisa jadi sesingkat ini akhirnya :
 . }
 ```
 
-### Penting
+### Penting !!
 
 Ketika **tanpa argumen** , kita harus menggunakan tanda kurung kosong dalam mendeklarasikan fungsi :
 
@@ -103,9 +103,9 @@ Kode diatas pada dasarnya sama seperti kode yang lebih panjang dibawah ini :
 
 ## Exports & Imports
 
-Dalam project React, khususnya dalam semua project Javascript modern, kita menggabungkan kode antar banyak file Javascript - itu disebut `Modules`. Kita melakukannya untuk menjaga setiap file atau module tetap fokus dan termanajemen.
+Dalam project React, khususnya dalam semua project Javascript modern, kita menggabungkan kode antar banyak file Javascript - itu disebut `Modules`. Kita melakukannya untuk menjaga setiap file atau module tetap fokus dan tetap teratur.
 
-Jadi untuk dapat mengakses fungsional dari file lain, kita perlu melakukan `export` (untuk membuat ketersedian) dan melakukan `import` (untuk mendapatkan akses) ke statetment dari file lainnya.
+Jadi untuk dapat mengakses fungsional dari file lain, kita perlu melakukan `export` (untuk membuat ketersedian) dan melakukan `import` (untuk mendapatkan akses) ke statement dari file lainnya.
 
 ### export
 
@@ -137,7 +137,7 @@ Sedangkan untuk `Named exports` harus di importkan berdasarkan namanya :
 import { someData } from "./path/to/file.js";
 ```
 
-Satu file hanya dapat mengandung 1 default yang dapat di export sedangkan untuk named Export memiliki jumlah yang tak terbatas. Saat melakukan import `named export`, kita juga bisa mengimportkan semua fungsionalnya dalam sekalian dengan syntax seperti berikut :
+Ingat bahwa satu file hanya dapat mengandung 1 default yang dapat di export sedangkan untuk named Export memiliki jumlah yang tak terbatas. Saat melakukan import `named export`, kita juga bisa mengimportkan semua fungsionalnya dalam sekalian dengan syntax seperti berikut :
 
 ```javascript
 import * as upToYour from "./path/to/file.js";
@@ -151,4 +151,4 @@ export const someData = ... (/path/to/file.js)
 
 Kita dapat mengaksesnya dengan `upToYou` seperti : `javascript upToYou.someData`
 
-**Pada postingan saya berikutnya akan membahas lanjutannya mengenai `Classes`, `Spread / Rest Operator` dan `Destructing`**
+**Pada postingan saya berikutnya akan membahas kelanjutannya mengenai `Classes`, `Spread / Rest Operator` dan `Destructing`**
