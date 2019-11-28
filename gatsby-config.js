@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://teukumulya-ichsan.github.io`,
     description: `Teuku Mulia Ichsan Blog Site`,
     hero: {
-      heading: `After nearly four years without a blog, I'm starting over. To explain the simple thinking of the developers`,
+      heading: `After nearly four years without a blog, I'm starting over. To explain about developers simple thought`,
       maxWidth: 652
     },
     social: [
