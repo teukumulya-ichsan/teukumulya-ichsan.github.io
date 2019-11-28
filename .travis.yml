@@ -1,19 +1,28 @@
+# setup languange & cache
 language: node_js
+node_js:
+  - "12.3.1"
 cache:
   directories:
     - ~/.npm
+
+# setup notifikasi ke email
 notifications:
   email:
     recipients:
       - ichsan.mulya@outlook.com
     on_success: always
     on_failure: always
-node_js:
-  - "12.3.1"
+
+# setup git dengan 3 kloningan supaya lebih cepat
 git:
   depth: 3
+
+# setup script build
 script:
   - yarn build
+
+# setup deploy pada provider github pages, target branch build dri develop ke masters
 deploy:
   provider: pages
   skip-cleanup: true

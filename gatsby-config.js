@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Try to Think Simple`,
     name: `Teuku Mulia Ichsan`,
-    siteUrl: `https://teukumulya-ichsan.com`,
+    siteUrl: `https://teukumulya-ichsan.github.io`,
     description: `Teuku Mulia Ichsan Blog Site`,
     hero: {
-      heading: `After nearly four years without a blog, I'm starting over. To explain a simple think about developers`,
+      heading: `After nearly four years without a blog, I'm starting over. To explain the simple thinking of the developers`,
       maxWidth: 652
     },
     social: [
@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         name: `github`,
-        url: `https://github.com/arogant7000`
+        url: `https://github.com/teukumulya-ichsan`
       },
       {
         name: `instagram`,
